@@ -419,7 +419,7 @@ margin-bottom: 16px;
 }
 
 .social-list-link.link {
-    transition-property: color background-color;
+    transition-property: color, background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
     display: flex;
@@ -459,9 +459,20 @@ fill: var(--wite-color);
     border-radius: 4px;
 }
 
+.regular-clients-link:hover,
+.regular-clients-link:after {
+    border: 1px solid #2196F3;
+}
+
+.regular-clients-link {
+    transition-property: border;
+    transition-duration: 2500ms;
+    transition-timing-function: var(--transition-timing-function);
+}
+
 .regular-clients-item {
-    transition-property: fill;
-    transition-duration: var(--transition-duration);
+    transition-property: fill, border;
+    transition-duration: 2500ms;
     transition-timing-function: var(--transition-timing-function);
     fill:  #AFB1B8;
 }
@@ -580,13 +591,10 @@ margin-bottom: 20px;
     left: 0;
     background-color: var(--background-color-backdrop);
     z-index: 10;
-
-    animation-name: emergenceBackdrop;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+    transition-property: opacity, visibility;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
 }
-
 
 .modal {
     position: absolute;
@@ -636,9 +644,6 @@ margin-bottom: 20px;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition-property: opacity visibility;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
 }
 
 /* ============Страница portfolio================ */
@@ -669,7 +674,7 @@ letter-spacing: 0.03em;
 
 
 .button {
-    transition-property: background-color;
+    transition-property: background-color, color, box-shadow;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
     padding: 6px 22px;
@@ -702,6 +707,9 @@ letter-spacing: 0.03em;
 
 .portfolio-list-link {
     display: block;
+    transition-property: box-shadow;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .link.portfolio-list-link:hover,
